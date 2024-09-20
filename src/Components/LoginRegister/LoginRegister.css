@@ -1,0 +1,132 @@
+/* Wrapper for the form */
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 450px;
+    background: transparent; /* Background color of the form wrapper */
+    border: 2px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0,0,.1);
+    color: #fff; /* Text color */
+    display: flex; /* Center content vertically and horizontally */
+    align-items: center; /* Align content vertically */
+    transition: height .2s ease;
+    overflow: hidden;
+
+}
+.wrapper.active{
+    height: 520px;
+}
+
+/* Form box styling */
+.wrapper .form-box {
+    width: 100%; /* Full width inside the wrapper */
+    padding: 40px; /* Padding around the form elements */
+}
+.wrapper .form-box.login{
+    transition: translate .18s ease;
+    translate: 0;
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    translate: -400px;
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    translate: 400px;
+
+}
+.wrapper.active .form-box.register{
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+/* Styling for the form heading */
+form h1 {
+    font-size: 36px; /* Font size of the heading */
+    text-align: center; /* Center align the heading text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Input box container styling */
+form .input-box {
+    position: relative; /* Position relative for icon placement */
+    width: 100%; /* Full width inside the form box */
+    height: 50px; /* Height of the input box */
+    margin: 30px 0; /* Space around input boxes */
+}
+
+/* Input field styling */
+.input-box input {
+    width: 100%; /* Full width inside the input box */
+    height: 100%; /* Full height inside the input box */
+    background: transparent !important; /* Transparent background */
+    border: none; /* No border */
+    outline: none; /* No outline on focus */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Light border */
+    border-radius: 40px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    padding: 20px 45px 20px 20px; /* Padding inside the input for text */
+}
+
+/* Placeholder text styling */
+.input-box input::placeholder {
+    color: #e8f0f8; /* Color for placeholder text */
+    opacity: 0.8; /* Slight transparency for the placeholder */
+}
+
+/* Optional: Add styling for icons if needed */
+.input-box .icon {
+    position: absolute; /* Position icons absolutely */
+    right: 15px; /* Align icons to the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    font-size: 16px;
+}
+form .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+.remember-forgot label input{
+    accent-color: #fff;
+    margin: 4px;
+}
+.remember-forgot a{
+    color: #fff;
+   
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+form button{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0,0,.5);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+form .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
